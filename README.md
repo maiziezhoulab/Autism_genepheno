@@ -187,7 +187,26 @@ In the third step, we can extract one certain gene’s information using this sc
 
 The dir of the input file and output file is shown in the second cell of the script.
 
-About the output, all the output file is put in ‘one_gene_information’
+```
+#define dir
+json_path = '.\\Extraced_results'
+jsons = glob.glob("{}\\*.json".format(json_path)) 
+# input dir
+NPMI_dir='.\\NPMI_file\\NPMI.json'
+np_dir = '.\\Sum_all\\n_p.txt'
+ng_dir = '.\\Sum_all\\n_g.txt'
+In_Summary_dir='.\\Sum_all\\In_Summary.txt'
+# output dir
+one_information_dir = '.\\one_gene_information\\'
+```
+The certain gene is defined in the third cell of the script.
+
+```
+# define the extracted gene
+gene_extract = "SLC38A11"
+```
+
+About the output, all the output file is put in ‘one_gene_information’.
 
 In the ‘xxx_information.json’ file, the information of a certain gene is given. The format should be as follows:
 
