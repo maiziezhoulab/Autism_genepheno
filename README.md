@@ -180,3 +180,88 @@ UBE3A	1	1	0 ...
 
 ```
 
+ ### Go through the cells of Jupyter Notebook 'extract_one_gene_information.ipynb'.
+ 
+
+In the third step, we can extract one certain gene’s information using this script. 
+
+The dir of the input file and output file is shown in the second cell of the script.
+
+About the output, all the output file is put in ‘one_gene_information’
+
+In the ‘xxx_information.json’ file, the information of a certain gene is given. The format should be as follows:
+
+```
+{
+    "Gene name": "SLC38A11",
+    "Gene sfari class": "NA",
+    "Related phenotype NPMI": {
+        "['C0040517', \"(Psychogenic tics) or (Gilles de la Tourette's syndrome)\", 'SNOMEDCT_US', 'NULL']": 0.4482389306173313,
+        "['C2169806', 'Tic disorder', 'SNOMEDCT_US, HPO', 'HP:0100033']": 0.3829211143253955
+    },
+    "Related sentences": {
+        "Sentence001": {
+            "Content": "Thus, heterozygous deletion of these genes might also play a pivotal role in conferring ASD symptoms and could even be suggested to confer symptoms of Tourette syndrome in the present case: Loss of SLC38A11, a putative sodium-coupled neutral amino acid transporter [23] might enhance the effects of SCN2A and SCN3A deletion.",
+            "Gene": [
+                "SLC38A11",
+                "SCN2A",
+                "SCN3A"
+            ],
+            "Normolized phenotype": [
+                [
+                    "C0040517",
+                    "(Psychogenic tics) or (Gilles de la Tourette's syndrome)",
+                    "SNOMEDCT_US",
+                    "NULL"
+                ]
+            ],
+            "Original phenotype": [
+                "Tourette syndrome"
+            ],
+            "PMCid": "PMC6090917",
+            "Title": "Heterozygous deletion of SCN2A and SCN3A in a patient with autism spectrum disorder and Tourette syndrome: a case report (Published on 8/2/2018)",
+            "Upper level concepts (HPO only)": []
+        },
+        "Sentence002": {
+            "Content": "It remains to be elucidated whether the heterozygous loss of SCN2A and SCN3A or GRB14, COBLL1 and SLC38A11, respectively, might also contribute to the development of tics, which remains subject to investigation in large hypothesis-driven association studies.",
+            "Gene": [
+                "SCN2A",
+                "SCN3A",
+                "GRB14",
+                "COBLL1",
+                "SLC38A11"
+            ],
+            "Normolized phenotype": [
+                [
+                    "C2169806",
+                    "Tic disorder",
+                    "SNOMEDCT_US, HPO",
+                    "HP:0100033"
+                ]
+            ],
+            "Original phenotype": [
+                "tics"
+            ],
+            "PMCid": "PMC6090917",
+            "Title": "Heterozygous deletion of SCN2A and SCN3A in a patient with autism spectrum disorder and Tourette syndrome: a case report (Published on 8/2/2018)",
+            "Upper level concepts (HPO only)": [
+                "Abnormality of the nervous system"
+            ]
+        }
+    },
+    "Summary": {
+        "Normolized phenotype number": 2,
+        "Paper list": [
+            "PMC6090917"
+        ],
+        "Paper name list": [
+            "Heterozygous deletion of SCN2A and SCN3A in a patient with autism spectrum disorder and Tourette syndrome: a case report (Published on 8/2/2018)"
+        ],
+        "Paper number": 1,
+        "Sentence number": 2
+    }
+}
+```
+
+In the ‘xxx_summary.txt’, the summary in the ‘xxx_information.json’ file is given.
+
