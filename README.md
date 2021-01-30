@@ -98,3 +98,85 @@ Unique normalized phenotype list from all papers: ["['C1510472', 'Dependence syn
 
 ```
 
+ ### Go through the cells of Jupyter Notebook 'NPMI_calculate.ipynb'.
+ 
+The second step is analyzing the result in the first step. This script will calculate the NPMI of each pair and also output the gene-phenotype matrix. 
+
+The dir of the input file and output file is shown in the second cell of the script.
+
+```
+# input file dir
+json_path = '.\\Extraced_results'# the path of output file in 'Gene_Phenotype_Extraction.ipynb'
+jsons = glob.glob("{}\\*.json".format(json_path)) # get the dir of every file in .\\Extraced_results
+np_dir = '.\\Sum_all\\n_p.txt'# the output file in 'Gene_Phenotype_Extraction.ipynb'
+ng_dir = '.\\Sum_all\\n_g.txt'# the output file in 'Gene_Phenotype_Extraction.ipynb'
+In_Summary_dir='.\\Sum_all\\In_Summary.txt'# the output file in 'Gene_Phenotype_Extraction.ipynb'
+sfari_gene_dir='.\\Genotype_list\\SFARI-Gene_genes_12-11-2020release_12-19-2020export.xlsx'# the SFARI genes file dir
+
+genes_outlier = ['BDNF']# define gene outlier
+
+# output file dir
+NPMI_dir='.\\NPMI_file\\NPMI.json' # raw NPMI json file
+NPMI_csv_dir='.\\NPMI_file\\NPMI.csv'# raw NPMI csv file
+NPMI_above_zero_csv_dir='.\\NPMI_file\\NPMI_above_zero.csv'# pairs with NPMI above 0, csv file
+graph_matrix_dir = '.\\NPMI_file\\graph_matrix_01_NPMIabove0.csv'# matrix, NPMI>0 -> 1,NPMI<=0 -> 0
+```
+About the input, apart from the output file in the first step, the SFARI genes file is needed.
+
+Also, by defining the list ‘genes_outlier’, we can delete some genes which are known as outliers in the gene list. 
+
+About the output, all the output file is put in ‘NPMI_file’.
+
+In the ‘NPMI.json’ file, the gene-phenotype pairs’ NPMI, n_g, n_p, n_gp and gene_sfari_class are noted down as JSON files, named after the gene names and phenotype names. Presenting a JSON file would make it easier for further data analysis. The format should be as follows:
+
+```
+[
+    {
+        "gene": "CA1",
+        "phenotype": "['C0027651', 'Neoplasia', 'HPO', 'HP:0002664']",
+        "NPMI": -0.2549212816058176,
+        "gene_sfari_class": "NA",
+        "n_g": 5163,
+        "n_p": 23384,
+        "n_gp": 1.0
+    },
+    {
+        "gene": "CA1",
+        "phenotype": "['C0006826', 'Cancer', 'HPO', 'HP:0002664']",
+        "NPMI": -0.2346279960018859,
+        "gene_sfari_class": "NA",
+        "n_g": 5163,
+        "n_p": 29419,
+        "n_gp": 2.0
+    },
+    ...
+]
+```
+
+In the ‘NPMI.csv’ file, the same data as the ‘NPMI.json’ file is presented in a CSV file. The format should be as follows:
+
+```
+gene,phenotype,gene_sfari_class,NPMI,n_g,n_p,n_gp
+GEM,"['C0346326', 'Optic glioma', 'HPO', 'HP:0009734']",NA,0.4216545678251195,156,34,1.0
+GEM,"['C3665386', 'Loss of vision', 'OMIM, HPO', 'HP:0000572']",NA,0.3866853509894122,156,262,3.0
+GEM,"['C0031099', 'Periodontitis', 'MSH, OMIM, SNOMEDCT_US, HPO', 'HP:0000704']",NA,0.3412615687957112,156,112,1.0
+...
+FAS,"['C3146244', 'Alcohol Related Birth Defects', 'MSH', 'NULL']",NA,0.7067812880215343,201,6,5.0
+FAS,"['C0015923', 'FAS - Fetal alcohol syndrome', 'SNOMEDCT_US', 'NULL']",NA,0.6899769648899337,201,78,20.0
+FAS,"['C3661483', 'Partial Fetal Alcohol Syndrome', 'MSH', 'NULL']",NA,0.6423665193607985,201,1,1.0
+...
+
+```
+In the ‘NPMI_above_zer.csv’ file, pairs that have NPMI>0 is presented in a CSV file. These pairs are considered as strong pairs. The format should be the same as the ‘NPMI.csv’ file.
+
+In the ‘graph_matrix_01_NPMIabove0.csv’ file, we present a matrix that shows the relationship of gene and phenotype. Its row is a gene and column is a phenotype. If the NPMI of this gene-phenotype pair is above 0, then the crosspoint would be 1. else, the crosspoint would be 0. The format should be as follows:
+
+```
+	['C1535926', 'Child Mental Disorders', 'MSH', 'NULL']	['C0038271', 'Repetitive movements', 'HPO', 'HP:0000733']	['C0019247', 'Genetic Diseases', 'MSH', 'NULL'] ...
+GEM	0	0	0 ...
+FAS	1	0	1 ...
+UBE3A	1	1	0 ...
+...
+
+```
+
