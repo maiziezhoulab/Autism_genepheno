@@ -15,6 +15,8 @@ HPOtreeview_dir = './Phenotype_list/HPO(treeview).txt' # The treeview form of HP
 c2upper_dir = './Phenotype_list/c2upper.txt'           # Phenotypes and their upper-level concepts.
 allGene_dir = './Genotype_list/export_latest.tsv'      # The genotype list.
 papers_dir = './XML_datasets_5year/'                   # Target papers in the last five years.
+
+out_dir = "Autism_genepheno_results"                   # default = "./Autism_genepheno_results"
 #============================================================================================
 ```
 Please make sure they are in the same format as ours if you want to use your own input files or change their respective reading directories if you want to put the input files arbitrarily.
