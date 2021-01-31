@@ -4,25 +4,35 @@
  
  The final cell will run the function which starts to output the results at the beginning or at where you stopped last time.
  
- ##### Note that the `get_input_dirs` function in the first cell lists the directories of input files. 
+ ##### Note that the `get_dirs` function in the first cell lists the directories of input and output files. 
  
  ```
 #============================================================================================
 ASDPTO_dir = './Phenotype_list/ASDPTO.csv'             # The ASDPTO part phenotype list.
 UMLS_dir = './Phenotype_list/UMLS.txt'                 # The UMLS part phenotype list.
-HPOdel_dir = './Phenotype_list/del_ls_HPOtreeview.txt' # Removed upper-level concepts in HPO.
-HPOtreeview_dir = './Phenotype_list/HPO(treeview).txt' # The treeview form of HPO list.
-c2upper_dir = './Phenotype_list/c2upper.txt'           # Phenotypes and their upper-level concepts.
 allGene_dir = './Genotype_list/export_latest.tsv'      # The genotype list.
 papers_dir = './XML_datasets_5year/'                   # Target papers in the last five years.
 
-out_dir = "Autism_genepheno_results"                   # default = "./Autism_genepheno_results"
+out_dir = './Autism_genepheno_results/'                # default = './Autism_genepheno_results/'
 #============================================================================================
 ```
-Please make sure they are in the same format as ours if you want to use your own input files or change their respective reading directories if you want to put the input files arbitrarily.
+Please make sure your input are in the same format as ours if you want to use your own or change their respective reading directories if you want to put the input files arbitrarily.
 
 
-##### Outputs will be presented in three directories named 'Extraced_results', 'Sum_for_each_paper' and 'Sum_all'.
+##### The default output directory named  named './Autism_genepheno_results/' is organized as follows:
+```
+Autism_genepheno_results
+|-Extracted_results
+|   |-PMCxxxxxxx.json
+|   ...
+|Sum_for_each_paper
+|    |-PMCxxxxxx.txt
+|    ...
+|Sum_all
+     |-n_g.txt
+     |-n_p.txt
+     |In_Summary.txt
+```
 In 'Extraced_results', the extracted information of those papers which get at least one extracted sentences is noted down as Json files, named after the PMCid of the papers. The format should be as follows:
 
  ```
