@@ -22,7 +22,7 @@ The certain gene is defined in the third cell of the script.
 
 ```
 # define the extracted gene
-gene_extract = "SLC38A11"
+gene_extract = "SHANK3"
 ```
 
 When finished, you will get:
