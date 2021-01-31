@@ -116,6 +116,7 @@ sfari_gene_dir='.\\Genotype_list\\SFARI-Gene_genes_12-11-2020release_12-19-2020e
 genes_outlier = ['BDNF']# define gene outlier
 
 # output file dir
+NPMI_dir= NPMI_Results  # default folder = "NPMI_results"
 NPMI_dir='.\\NPMI_file\\NPMI.json' # raw NPMI json file
 NPMI_csv_dir='.\\NPMI_file\\NPMI.csv'# raw NPMI csv file
 NPMI_above_zero_csv_dir='.\\NPMI_file\\NPMI_above_zero.csv'# pairs with NPMI above 0, csv file
