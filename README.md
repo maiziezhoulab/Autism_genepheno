@@ -1,6 +1,6 @@
 # Autism_GenePheno
 
- ### Go through the cells of Jupyter Notebook 'Gene_Phenotype_Extraction.ipynb'.
+ ### Step1: Go through the cells of Jupyter Notebook 'Gene_Phenotype_Extraction.ipynb'.
  
  The final cell will run the function which starts to output the results at the beginning or at where you stopped last time.
  
