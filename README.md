@@ -170,6 +170,6 @@ In the ‘graph_matrix_01_NPMIabove0.csv’ file, we present a matrix that shows
  
  In the third step, we can extract one certain gene’s information using this script.
  
- You can get the README file [here](https://github.com/maiziezhoulab/Autism_GenePheno/blob/master/analysis/Step3_README.md)
+ You can get the README file [here](https://github.com/maiziezhoulab/Autism_GenePheno/blob/master/analysis/Step3_README.md).
 
 
