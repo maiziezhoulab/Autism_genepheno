@@ -1,6 +1,6 @@
 # Autism_GenePheno
 
- ### Step1: Go through the cells of Jupyter Notebook 'Gene_Phenotype_Extraction.ipynb'.
+ ### Step1: Go through the cells of Jupyter Notebook 'Autism_GenePheno_step1.ipynb'.
  
  The final cell will run the function which starts to output the results at the beginning or at where you stopped last time.
  
@@ -8,14 +8,18 @@
  
  ```
 #============================================================================================
-ASDPTO_dir = './Phenotype_list/ASDPTO.csv'             # The ASDPTO part phenotype list.
-UMLS_dir = './Phenotype_list/UMLS.txt'                 # The UMLS part phenotype list.
-allGene_dir = './Genotype_list/export_latest.tsv'      # The genotype list.
+ASDPTO_dir = './source/ASDPTO.csv'                     # The ASDPTO part phenotype list.
+UMLS_dir = './source/UMLS.txt'                         # The UMLS part phenotype list.
+allGene_dir = './source/export_latest.tsv'             # The genotype list.
 papers_dir = './XML_datasets_5year/'                   # Target papers in the last five years.
 
 out_dir = './Autism_genepheno_results/'                # default = './Autism_genepheno_results/'
 #============================================================================================
 ```
+The gene list sees ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing).
+
+Papers in the last 5 years see ['XML_datasets_5year'](https://drive.google.com/drive/folders/1431UFcXAqdx0lub2vSe28khxkSmt73__?usp=sharing).
+
 Please make sure your input are in the same format as ours if you want to use your own or change their respective reading directories if you want to put the input files arbitrarily.
 
 
