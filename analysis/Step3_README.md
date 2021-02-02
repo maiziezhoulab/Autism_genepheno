@@ -5,17 +5,15 @@ In the third step, we can extract one certain gene’s information using this sc
 The dir of the input file and output file is shown in the second cell of the script.
 
 ```
-#define dir
-
 # input dir
-json_path = '.\\Extraced_results'             # the output file of step1
-np_dir = '.\\Sum_all\\n_p.txt'                # the output file of step1
-ng_dir = '.\\Sum_all\\n_g.txt'                # the output file of step1
-In_Summary_dir='.\\Sum_all\\In_Summary.txt'   # the output file of step1
-NPMI_dir='.\\NPMI_file\\NPMI.json'            # the output file of step2
+json_path = './Extraced_results'             # the output file of step1
+np_dir = './Sum_all/n_p.txt'                # the output file of step1
+ng_dir = './Sum_all/n_g.txt'                # the output file of step1
+In_Summary_dir='./Sum_all/In_Summary.txt'   # the output file of step1
+NPMI_dir='./NPMI_file/NPMI.json'            # the output file of step2
 
 # output dir
-one_information_dir = '.\\one_gene_information\\'
+one_information_dir = './one_gene_information/'
 ```
 
 The certain gene is defined in the third cell of the script.
