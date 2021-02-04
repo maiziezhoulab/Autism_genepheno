@@ -29,10 +29,10 @@ Autism_genepheno_results
 |-Extracted_results
 |   |-PMCxxxxxxx.json
 |   ...
-|Sum_for_each_paper
+|-Sum_for_each_paper
 |    |-PMCxxxxxx.txt
 |    ...
-|Sum_all
+|-Sum_all
      |-n_g.txt
      |-n_p.txt
      |In_Summary.txt
