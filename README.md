@@ -1,6 +1,6 @@
 # Autism_genepheno
 
- ### Step1: Go through the cells of Jupyter Notebook 'Autism_GenePheno_step1.ipynb'.
+ ### Step1: Go through the cells of Jupyter Notebook 'Autism_genepheno_step1.ipynb'.
  
  The final cell will run the function which starts to output the results at the beginning or at where you stopped last time.
  
