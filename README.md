@@ -1,4 +1,4 @@
-# Autism_GenePheno
+# Autism_genepheno
 
  ### Step1: Go through the cells of Jupyter Notebook 'Autism_GenePheno_step1.ipynb'.
  
