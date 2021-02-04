@@ -122,18 +122,19 @@ The dir of the input file and output file is shown in the second cell of the scr
 
 ```
 # input file dir
-json_path = './Extraced_results'              # the output file of step1
-np_dir = './Sum_all/n_p.txt'                 # the output file of step1
-ng_dir = './Sum_all/n_g.txt'                 # the output file of step1
-In_Summary_dir='./Sum_all/In_Summary.txt'    # the output file of step1
-sfari_gene_dir='./Genotype_list/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xlsx'# the SFARI genes file dir
+json_path = './Autism_genepheno_results/Extraced_results'              # the output file of step1
+np_dir = './Autism_genepheno_results/Sum_all/n_p.txt'                  # the output file of step1
+ng_dir = './Autism_genepheno_results/Sum_all/n_g.txt'                  # the output file of step1
+In_Summary_dir='./Autism_genepheno_results/Sum_all/In_Summary.txt'     # the output file of step1
+sfari_gene_dir='../source/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xlsx'# the SFARI genes file dir
 
 # output file dir
-NPMI_result_dir='./NPMI_file/'               # folder of NPMI file 
+NPMI_result_dir='./Autism_genepheno_results/NPMI_file/'                # folder of NPMI file 
 ```
 
 When finished, you will get:
 ```
+Autism_genepheno_results
 |-NPMI_file
     |-NPMI.json
     |-NPMI.csv
