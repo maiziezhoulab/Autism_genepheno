@@ -1,10 +1,11 @@
- ### Step3: 'extract_one_gene_information.ipynb'.
+ ### Step3: Go through the cells of Jupyter Notebook 'Autism_genepheno_step3.ipynb'.
  
 In the third step, we can extract one certain gene’s information using this script. 
 
-The dir of the input file and output file is shown in the second cell of the script.
+ ##### The dir of the input file and output file is shown in the second cell of the script.
 
 ```
+#============================================================================================
 # input dir
 json_path = './Autism_genepheno_results/Extraced_results'             # the output file of step1
 np_dir = './Autism_genepheno_results/Sum_all/n_p.txt'                 # the output file of step1
@@ -14,6 +15,7 @@ NPMI_dir='./Autism_genepheno_results/NPMI_file/NPMI.json'             # the outp
 
 # output dir
 one_information_dir = './Autism_genepheno_results/one_gene_information/'
+#============================================================================================
 ```
 
 The certain gene is defined in the third cell of the script.
