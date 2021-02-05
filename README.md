@@ -114,7 +114,7 @@ Unique normalized phenotype list from all papers: ["['C1510472', 'Dependence syn
 
 ```
 
- ### Step1: Go through the cells of Jupyter Notebook 'Autism_genepheno_step2.ipynb'.
+ ### Step2: Go through the cells of Jupyter Notebook 'Autism_genepheno_step2.ipynb'.
  
 The second step is analyzing the result in the first step. This script will calculate the NPMI of each pair and also output the gene-phenotype matrix. 
 
@@ -183,7 +183,7 @@ In the ‘graph_matrix_01_NPMIabove0.csv’ file, we present a matrix that shows
 
 ```
 
- ### Step3: 'extract_one_gene_information.ipynb'.
+ ### Step3: Go through the cells of Jupyter Notebook 'Autism_genepheno_step3.ipynb'.
  
  In the third step, we can extract one certain gene’s information using this script.
  
