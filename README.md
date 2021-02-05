@@ -114,13 +114,14 @@ Unique normalized phenotype list from all papers: ["['C1510472', 'Dependence syn
 
 ```
 
- ### Step2: 'NPMI_calculate.ipynb'.
+ ### Step1: Go through the cells of Jupyter Notebook 'Autism_genepheno_step2.ipynb'.
  
 The second step is analyzing the result in the first step. This script will calculate the NPMI of each pair and also output the gene-phenotype matrix. 
 
-The dir of the input file and output file is shown in the second cell of the script.
+ ##### The dir of the input file and output file is shown in the second cell of the script.
 
 ```
+#============================================================================================
 # input file dir
 json_path = './Autism_genepheno_results/Extraced_results'              # the output file of step1
 np_dir = './Autism_genepheno_results/Sum_all/n_p.txt'                  # the output file of step1
@@ -130,6 +131,7 @@ sfari_gene_dir='../source/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xl
 
 # output file dir
 NPMI_result_dir='./Autism_genepheno_results/NPMI_file/'                # folder of NPMI file 
+#============================================================================================
 ```
 
 When finished, you will get:
