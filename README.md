@@ -10,13 +10,13 @@
 #============================================================================================
 ASDPTO_dir = './source/ASDPTO.csv'                     # The ASDPTO part phenotype list.
 UMLS_dir = './source/UMLS.txt'                         # The UMLS part phenotype list.
-allGene_dir = './source/export_latest.tsv'             # The genotype list.
-papers_dir = './XML_Autism_datasets_5years/'                   # Target papers in the last five years.
+allGene_dir = './source/VariCarta_Autism_gene.tsv'             # The genotype list.
+papers_dir = './XML_Autism_datasets_5years/'           # Target papers in the last five years.
 
 out_dir = './Autism_genepheno_results/'                # default = './Autism_genepheno_results/'
 #============================================================================================
 ```
-The gene list sees ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing).
+The gene list sees ['VariCarta_Autism_gene.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing).
 
 Papers in the last 5 years see ['XML_Autism_datasets_5years'](https://drive.google.com/file/d/1I1EkKhPuhWj4o6S-uwJKu_70Wo9OHbeD/view?usp=sharing).
 
