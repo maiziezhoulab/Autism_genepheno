@@ -16,7 +16,7 @@ papers_dir = './XML_Autism_datasets_5years/'           # Target papers in the la
 out_dir = './Autism_genepheno_results/'                # default = './Autism_genepheno_results/'
 #============================================================================================
 ```
-The gene list sees ['VariCarta_Autism_gene.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing).
+The gene list sees ['VariCarta_Autism_gene.tsv'](https://drive.google.com/file/d/1ZDbTOunvQQXVb8o4RHIcOZlnL-2LPLl5/view?usp=sharing).
 
 Papers in the last 5 years see ['XML_Autism_datasets_5years'](https://drive.google.com/file/d/1I1EkKhPuhWj4o6S-uwJKu_70Wo9OHbeD/view?usp=sharing).
 
