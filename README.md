@@ -123,7 +123,7 @@ The second step is analyzing the result in the first step. This script will calc
 ```
 #============================================================================================
 # input file dir
-json_path = './Autism_genepheno_results/Extraced_results'              # the output file of step1
+json_path = './Autism_genepheno_results/Extracted_results'              # the output file of step1
 np_dir = './Autism_genepheno_results/Sum_all/n_p.txt'                  # the output file of step1
 ng_dir = './Autism_genepheno_results/Sum_all/n_g.txt'                  # the output file of step1
 In_Summary_dir='./Autism_genepheno_results/Sum_all/In_Summary.txt'     # the output file of step1
