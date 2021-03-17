@@ -44,7 +44,7 @@ def ncbi_pubmed_pmcId_scraper(xml_file_link="https://eutils.ncbi.nlm.nih.gov/ent
     # exit(-1)
     count = 0
     for id_ in ids:
-        link = xml_file_link + id_.strip().split("C")[0]# 感觉应该是0
+        link = xml_file_link + id_.strip().split("C")[0]#
 
         if id_.strip() + ".xml" in downloaded_files:
             print("already downloaded")
