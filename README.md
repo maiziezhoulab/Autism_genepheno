@@ -1,4 +1,25 @@
 # Autism_genepheno
+ ### Use 'Autism_GenePheno_PMC_scraper.py' to get target papers. 
+ 
+ This script is used to collect papers in PMC.
+ 
+ Put the PMC ids of papers you want to get in the file 'pmc_result.txt'. The format should be as follows:
+ 
+ ```
+ PMC6581070
+ PMC5964170
+ ...
+ ```
+ 
+ When finished, you will get target papers in folder 'XML_papers', which is organized as follows:
+ 
+ ```
+ Autism_genepheno_results
+ |-XML_paper
+ |    |-xxxxxxx.xml
+ |   ...
+
+ ```
 
  ### Step1: Go through the cells of Jupyter Notebook 'Autism_genepheno_step1.ipynb'.
  
