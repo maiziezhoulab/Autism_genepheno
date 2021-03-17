@@ -2,7 +2,7 @@
 
 A text mining pipeline to identify sentence-level mentions of autism-associated genes and phenotypes in literature through natural language processing methods. We aim to understand gene–phenotype associations in the autism-related literature to unravel the disease mechanisms and advance its diagnosis and treatment. We have generated a comprehensive database of gene-phenotype associations with the autism-related literature. The database can be easily updated as new literature becomes available with Autism_genepheno. To run Autism_genepheno pipeline, please follow the instructions below:
 
- ### STEP 0. Use 'Autism_GenePheno_PMC_scraper.py' to get target papers. The input file is 'pmc_result.txt' including PMC IDs of PMC papers. The outputs are target papers in XML format, which are saved in folder 'XML_papers'. 
+ ### STEP 0. Use 'Autism_genepheno_PMC_scraper.py' to get target papers. The input file is 'pmc_result.txt' including PMC IDs of PMC papers. The outputs are target papers in XML format, which are saved in folder 'XML_papers'. 
  
  This script is used to collect papers in PMC.
  
@@ -151,7 +151,7 @@ Output 3. The gene-phenotype matrix is in the ‘graph_matrix_01_NPMIabove0.csv�
 
 ```
 
- ### STEP 4. Run 'Autism_genepheno_step3.ipynb' to extract a certain gene's phenotype information.
+ ### STEP 3. Run 'Autism_genepheno_step3.ipynb' to extract a certain gene's phenotype information.
 Read the file [here](https://github.com/maiziezhoulab/Autism_GenePheno/blob/master/analysis/Step3_README.md).
 
 
