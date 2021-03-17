@@ -13,7 +13,7 @@ A text mining pipeline to identify sentence-level mentions of autism-associated 
  PMC5964170
  ...
  ```
- ### STEP 2. Run'Autism_genepheno_step1.ipynb' to extract sentence-level gene-phenotype pairs, their occurrences in each paper and the summary of results.
+ ### STEP 1. Run'Autism_genepheno_step1.ipynb' to extract sentence-level gene-phenotype pairs, their occurrences in each paper and the summary of results.
  
  ##### 1. Input are the path to gene list, phenotype list, and target papers folder. 'XML_paper'
 
@@ -103,7 +103,7 @@ Unique normalized phenotype list from all papers: ["['C1510472', 'Dependence syn
 
 ```
 
- ### STEP 3. Run 'Autism_genepheno_step2.ipynb' to analyze the results from STEP 2. It calculates the NPMI of each gene-phenotype pair and outputs the gene-phenotype matrix.
+ ### STEP 2. Run 'Autism_genepheno_step2.ipynb' to analyze the results from STEP 2. It calculates the NPMI of each gene-phenotype pair and outputs the gene-phenotype matrix.
  ##### 1. Inputs are the path to the results from STEP 2. They are path the folder 'Extracted_results', 'n_p.txt', 'n_g.txt' and 'In_Summary.txt'
 ##### 2. Outputs are saved under the directory named './Autism_genepheno_results/NPMI_file/':
 ```
