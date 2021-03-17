@@ -17,8 +17,7 @@
  Autism_genepheno_results
  |-XML_paper
  |    |-xxxxxxx.xml
- |   ...
-
+ |    | ...
  ```
 
  ### Step1: Go through the cells of Jupyter Notebook 'Autism_genepheno_step1.ipynb'.
