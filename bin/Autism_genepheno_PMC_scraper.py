@@ -12,7 +12,7 @@ import sys
 
 
 def ncbi_pubmed_pmcId_scraper(xml_file_link="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=",
-                              pmc_id_file_path="pmc_result.txt", out_dir='XML_paper', time_elapsed=1800):
+                              pmc_id_file_path="pmc_result.txt", out_dir='XML_Autism_datasets_5years', time_elapsed=1800):
     """
     scraping xml format papers based on PMC ids
 
@@ -44,7 +44,7 @@ def ncbi_pubmed_pmcId_scraper(xml_file_link="https://eutils.ncbi.nlm.nih.gov/ent
     # exit(-1)
     count = 0
     for id_ in ids:
-        link = xml_file_link + id_.strip().split("C")[0]#
+        link = xml_file_link + id_.strip().split("C")[0]
 
         if id_.strip() + ".xml" in downloaded_files:
             print("already downloaded")
