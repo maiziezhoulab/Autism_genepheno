@@ -28,9 +28,9 @@ papers_dir = './XML_datasets_5year/'                   # Target papers in the la
 out_dir = './Autism_genepheno_results/'                # default = './Autism_genepheno_results/'
 #============================================================================================
 ```
-You can download the gene list ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing).
+You can download the gene list ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing) here.
 
-You can download apers in the last 5 years ['XML_datasets_5year'](https://drive.google.com/drive/folders/1431UFcXAqdx0lub2vSe28khxkSmt73__?usp=sharing).
+You can download apers in the last 5 years ['XML_datasets_5year'](https://drive.google.com/drive/folders/1431UFcXAqdx0lub2vSe28khxkSmt73__?usp=sharing) here.
 
 
 ##### 2. Output directory named './Autism_genepheno_results/' is shown as:
@@ -171,6 +171,7 @@ Output 2. The NPMI results are grouped by gene in the file ‘NPMI.csv’ file a
 ```
 Output 3. The gene-phenotype matrix is in the ‘graph_matrix_01_NPMIabove0.csv’ file. The matrix shows the quantitative relationship between gene and phenotype. Each row refers to a gene and each column refers to a phenotype. If the NPMI value of a gene-phenotype pair is positive, then their value in the gene-phenotype matrix is 1. else 0. 
 
+
 ```
 |         | ['C1535926', 'Child Mental Disorders', 'MSH', 'NULL'] | ['C0038271', 'Repetitive movements', 'HPO','HP:0000733'] | ['C0019247', 'Genetic Diseases', 'MSH','NULL'] |   |   |   |
 |---------|-------------------------------------------------------|----------------------------------------------------------|------------------------------------------------|---|---|---|
@@ -181,7 +182,7 @@ Output 3. The gene-phenotype matrix is in the ‘graph_matrix_01_NPMIabove0.csv�
 
 ```
 
- ### STEP 3. Run 'Autism_genepheno_step3.ipynb' to extract a certain gene's phenotype information.
+### STEP 3. Run 'Autism_genepheno_step3.ipynb' to extract a certain gene's phenotype information.
 Read the file [here](https://github.com/maiziezhoulab/Autism_GenePheno/blob/master/analysis/Step3_README.md).
 
 
