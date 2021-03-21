@@ -135,6 +135,7 @@ sfari_gene_dir='../source/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xl
 # output file dir
 NPMI_result_dir='./Autism_genepheno_results/NPMI_file/'                # folder of NPMI file 
 #============================================================================================
+```
 ##### 2. Outputs are saved under the directory named './Autism_genepheno_results/NPMI_file/':
 ```
 Autism_genepheno_results
