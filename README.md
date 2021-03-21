@@ -18,6 +18,21 @@ An automatic text mining pipeline to identify sentence-level mentions of autism-
  ### STEP 1. Run 'Autism_genepheno_step1.ipynb' to extract sentence-level gene-phenotype pairs, their occurrences in each paper and the summary of results.
  
  ##### 1. Input are the path to gene list, phenotype list, and target papers folder'XML_Autism_datasets_5years'
+ ```
+#============================================================================================
+ASDPTO_dir = './source/ASDPTO.csv'                     # The ASDPTO part phenotype list.
+UMLS_dir = './source/UMLS.txt'                         # The UMLS part phenotype list.
+allGene_dir = './source/export_latest.tsv'             # The genotype list.
+papers_dir = './XML_datasets_5year/'                   # Target papers in the last five years.
+
+out_dir = './Autism_genepheno_results/'                # default = './Autism_genepheno_results/'
+#============================================================================================
+```
+The gene list sees ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing).
+
+Papers in the last 5 years see ['XML_datasets_5year'](https://drive.google.com/drive/folders/1431UFcXAqdx0lub2vSe28khxkSmt73__?usp=sharing).
+
+Please make sure your input are in the same format as ours if you want to use your own or change their respective reading directories if you want to put the input files arbitrarily.
 
 ##### 2. Output directory named './Autism_genepheno_results/' is shown as:
 ```
@@ -107,6 +122,20 @@ Unique normalized phenotype list from all papers: ["['C1510472', 'Dependence syn
 
  ### STEP 2. Run 'Autism_genepheno_step2.ipynb' to analyze the results from STEP 2. It calculates the NPMI of each gene-phenotype pair and outputs the gene-phenotype matrix.
  ##### 1. Inputs are the path to the results from STEP 2. They are path the folder 'Extracted_results', 'n_p.txt', 'n_g.txt' and 'In_Summary.txt'
+ ##### The dir of the input file and output file is shown in the second cell of the script.
+
+```
+#============================================================================================
+# input file dir
+json_path = './Autism_genepheno_results/Extraced_results'              # the output file of step1
+np_dir = './Autism_genepheno_results/Sum_all/n_p.txt'                  # the output file of step1
+ng_dir = './Autism_genepheno_results/Sum_all/n_g.txt'                  # the output file of step1
+In_Summary_dir='./Autism_genepheno_results/Sum_all/In_Summary.txt'     # the output file of step1
+sfari_gene_dir='../source/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xlsx'# the SFARI genes file dir
+
+# output file dir
+NPMI_result_dir='./Autism_genepheno_results/NPMI_file/'                # folder of NPMI file 
+#============================================================================================
 ##### 2. Outputs are saved under the directory named './Autism_genepheno_results/NPMI_file/':
 ```
 Autism_genepheno_results
