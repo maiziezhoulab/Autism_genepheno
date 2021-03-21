@@ -786,19 +786,20 @@ def find_breakpoint():
         get_sum_for_each_paper(f_ls[x:])
         get_sum_all()
         
-# import nltk
-# nltk.download('punkt')
-# nltk.download('stopwords')
-# nltk.download('wordnet')
-from nltk.tokenize import sent_tokenize
-from nltk.stem import WordNetLemmatizer
-from multiprocessing import Pool
-from functools import partial
-import copy
-import re
-import ast
-import csv
-import json
-import os
-
-find_breakpoint()
+if __name__ == "__main__":
+    # import nltk
+    # nltk.download('punkt')
+    # nltk.download('stopwords')
+    # nltk.download('wordnet')
+    from nltk.tokenize import sent_tokenize
+    from nltk.stem import WordNetLemmatizer
+    from multiprocessing import Pool
+    from functools import partial
+    import copy
+    import re
+    import ast
+    import csv
+    import json
+    import os
+    
+    find_breakpoint()
