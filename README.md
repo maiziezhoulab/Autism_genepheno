@@ -2,23 +2,13 @@
 
 An automatic text mining pipeline to identify sentence-level mentions of autism-associated genes and phenotypes in literature through natural language processing methods. We aim to understand gene–phenotype associations in the autism-related literature to unravel the disease mechanisms and advance its diagnosis and treatment. We have generated a comprehensive database of gene-phenotype associations with the autism-related literature. The database can be easily updated as new literature becomes available with Autism_genepheno. To run Autism_genepheno pipeline, please follow the instructions below:
 
- ### STEP 0. Run 'Autism_genepheno_PMC_scraper.py' to get target papers. The input file is 'pmc_result.txt' including PMC IDs of PMC papers. The outputs are target papers in XML format, which are saved in folder 'XML_Autism_datasets_5years'. 
- 
- This script is used to collect papers in PMC.
- 
- Put the PMC ids of papers you want to get in the file 'pmc_result.txt'. The format should be as follows:
+ ### STEP 0. Run 'Autism_genepheno_PMC_scraper.py' to get target papers. 
  
  ```
- PMC6581070
- PMC5964170
- ...
- ```
- 
- ```
-Autism_genepheno/bin/Autism_genepheno_PMC_scraper.py --bam_file possorted_bam.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila/Uniqness_map
+python3 Autism_genepheno/bin/Autism_genepheno_PMC_scraper.py --pmc_id_list source/pmc_result.txt --out_dir XML_Autism_datasets_5years
 ```
 #### *Required parameters
-##### --pmc_id_list: "pmc_result.txt" is txt file to store all papers' PMCID, one PMCID per line". To get the txt file, you can download it from PMC website <a href="https://www.ncbi.nlm.nih.gov/pmc/">here</a>.
+##### --pmc_id_list: "source/pmc_result.txt" is txt file to store all papers' PMCID, one PMCID per line". To get your customized txt file, you can download it from PMC website <a href="https://www.ncbi.nlm.nih.gov/pmc/">here</a>.
 
 #### *Optional parameters
 ##### --time_elapsed, default = 1800, wait 3mins time to download another batch of 300 papers.
@@ -29,12 +19,12 @@ Autism_genepheno/bin/Autism_genepheno_PMC_scraper.py --bam_file possorted_bam.ba
  ##### 1. Input are the path to gene list, phenotype list, and target papers folder 'XML_Autism_datasets_5years'.
  ```
 #============================================================================================
-ASDPTO_dir = './source/ASDPTO.csv'                     # The ASDPTO part phenotype list
-UMLS_dir = './source/UMLS.txt'                         # The UMLS part phenotype list
-allGene_dir = './source/export_latest.tsv'             # The autism-associated gene list from VariCarta database
-papers_dir = './XML_datasets_5year/'                   # Target papers in the last five years
+ASDPTO_dir = 'Autism_genepheno/source/ASDPTO.csv'                     # The ASDPTO part phenotype list
+UMLS_dir = 'Autism_genepheno/source/UMLS.txt'                         # The UMLS part phenotype list
+allGene_dir = 'Autism_genepheno/source/export_latest.tsv'             # The autism-associated gene list from VariCarta database
+papers_dir = './XML_datasets_5year/'                                  # Target papers in the last five years
 
-out_dir = './Autism_genepheno_results/'                # default = './Autism_genepheno_results/'
+out_dir = './Autism_genepheno_results/'                               # default = './Autism_genepheno_results/'
 #============================================================================================
 ```
 You can download the gene list ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing) here.
@@ -139,7 +129,7 @@ json_path = './Autism_genepheno_results/Extraced_results'              # the out
 np_dir = './Autism_genepheno_results/Sum_all/n_p.txt'                  # the output file of step1
 ng_dir = './Autism_genepheno_results/Sum_all/n_g.txt'                  # the output file of step1
 In_Summary_dir='./Autism_genepheno_results/Sum_all/In_Summary.txt'     # the output file of step1
-sfari_gene_dir='../source/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xlsx'# the SFARI genes file dir
+sfari_gene_dir='Autism_genepheno/source/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xlsx'# the SFARI genes file dir
 
 # output file dir
 NPMI_result_dir='./Autism_genepheno_results/NPMI_file/'                # folder of NPMI file 
