@@ -12,7 +12,7 @@ python3 Autism_genepheno/bin/Autism_genepheno_PMC_scraper.py --pmc_id_list sourc
 
 #### *Optional parameters
 ##### --time_elapsed, default = 1800, wait 3mins to download another batch of 300 papers.
-##### --out_dir, default = ./XML_datasets. You can define your own folder, for example "XML_Autims_datasets". 
+##### --out_dir, default = ./XML_datasets. You can define your own folder, for example "XML_Autism_datasets_5years". 
 
  ### STEP 1. Run 'Autism_genepheno_step1.ipynb' to extract sentence-level gene-phenotype pairs, their occurrences in each paper and the summary of results.
  
