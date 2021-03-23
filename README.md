@@ -16,7 +16,7 @@ python3 Autism_genepheno/bin/Autism_genepheno_PMC_scraper.py --pmc_id_list sourc
 
  ### STEP 1. Run 'Autism_genepheno_step1.ipynb' to extract sentence-level gene-phenotype pairs, their occurrences in each paper and the summary of results.
  
- ##### 1. Input are the path to gene list, phenotype list, and target papers folder 'XML_Autism_datasets_5years' from STEP 0. 
+ ##### 1. Input are the path to gene list, phenotype list, and target papers folder ``'XML_Autism_datasets_5years'`` from STEP 0. 
  ```
 #==========================================================================================================================
 ASDPTO_dir = 'Autism_genepheno/source/ASDPTO.csv'                # The ASDPTO part phenotype list
