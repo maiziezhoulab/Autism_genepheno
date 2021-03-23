@@ -144,7 +144,7 @@ Autism_genepheno_results
     |-NPMI_above_zero.csv
     |-graph_matrix_01_NPMIabove0.csv
 ```
-Output 1. The file ‘NPMI.json' includes all the NPMI information of each gene-phenotype pair. Here is an example of the NPMI information of a gene-phenotype pair.
+Output 1. The file ``‘NPMI.json'`` includes all the NPMI information of each gene-phenotype pair. Here is an example of the NPMI information of a gene-phenotype pair.
 ```
 [
     {
