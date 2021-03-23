@@ -18,7 +18,11 @@ An automatic text mining pipeline to identify sentence-level mentions of autism-
 Autism_genepheno/bin/Autism_genepheno_PMC_scraper.py --bam_file possorted_bam.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila/Uniqness_map
 ```
 #### *Required parameters
-##### --bam_file: "possorted_bam.bam" is bam file generated from barcode-awere aligner like "Lonranger align". How to get bam file, you can also check <a href="https://github.com/maiziex/Aquila/blob/master/src/How_to_get_bam_and_vcf.md">here</a>.
+##### --pmc_id_list: "pmc_result.txt" is txt file to store all papers' PMCID, one PMCID per line". To get the txt file, you can download it from PMC website <a href="https://www.ncbi.nlm.nih.gov/pmc/">here</a>.
+
+#### *Optional parameters
+##### --time_elapsed, default = 1800, wait 3mins time to download another batch of 300 papers.
+##### --out_dir, default = ./XML_datasets. You can define your own folder, for example "XML_Autims_datasets". 
 
  ### STEP 1. Run 'Autism_genepheno_step1.ipynb' to extract sentence-level gene-phenotype pairs, their occurrences in each paper and the summary of results.
  
