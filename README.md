@@ -16,7 +16,7 @@ python3 Autism_genepheno/bin/Autism_genepheno_PMC_scraper.py --pmc_id_list sourc
 
  ### STEP 1. Run 'Autism_genepheno_step1.ipynb' to extract sentence-level gene-phenotype pairs, their occurrences in each paper and the summary of results.
  
- ##### 1. Input are the path to gene list, phenotype list, and target papers folder 'XML_Autism_datasets_5years' from step0. 
+ ##### 1. Input are the path to gene list, phenotype list, and target papers folder 'XML_Autism_datasets_5years' from STEP 0. 
  ```
 #==========================================================================================================================
 ASDPTO_dir = 'Autism_genepheno/source/ASDPTO.csv'                # The ASDPTO part phenotype list
@@ -29,10 +29,10 @@ out_dir = './Autism_genepheno_results/'                          # default = './
 ```
 You can download the gene list ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing) here.
 
-To skip step0, you can also download target papers in the last 5 years ['XML_Autism_datasets_5year'](https://drive.google.com/file/d/1pe4UDVBuo0l8NXN5SI84k4bsYUnBHDau/view?usp=sharing) here.
+To skip STEP 0, you can also download target papers in the last 5 years ['XML_Autism_datasets_5year'](https://drive.google.com/file/d/1pe4UDVBuo0l8NXN5SI84k4bsYUnBHDau/view?usp=sharing) here.
 
 
-##### 2. Output directory named './Autism_genepheno_results/' is shown as:
+##### 2. Output directory named ``'./Autism_genepheno_results/'`` is shown as:
 ```
 Autism_genepheno_results
 |-Extracted_results
@@ -79,7 +79,7 @@ Output 1. Extracted sentence-level gene-phenotype pairs in the folder ``'Extract
 
 ```
 
-Output 2. Occurrence of genes and phenotypes for each paper in the folder 'Sum_for_each_paper'. Here is an example of the results in JSON format.
+Output 2. Occurrence of genes and phenotypes for each paper in the folder ``'Sum_for_each_paper'``. Here is an example of the results in JSON format.
  ```
 {
     "PMCid": "PMC6741850", 
@@ -99,7 +99,7 @@ Output 2. Occurrence of genes and phenotypes for each paper in the folder 'Sum_f
 }
 
 ```
-Output 3. Summary of results in the folder 'Sum_all'. Here is an example of the summary:
+Output 3. Summary of results in the folder ``'Sum_all'``. Here is an example of the summary:
 
  ```
 Number of paper processed: 15095
@@ -118,8 +118,8 @@ Unique normalized phenotype list from all papers: ["['C1510472', 'Dependence syn
 
 ```
 
- ### STEP 2. Run 'Autism_genepheno_step2.ipynb' to analyze the results from STEP 2. It calculates the NPMI of each gene-phenotype pair and outputs the gene-phenotype matrix.
- ##### 1. Inputs are the path to the results from STEP 2. They are path the folder 'Extracted_results', 'n_p.txt', 'n_g.txt' and 'In_Summary.txt'
+ ### STEP 2. Run 'Autism_genepheno_step2.ipynb' to analyze the ``"Autism_genepheno_results"`` from STEP 2. It calculates the NPMI of each gene-phenotype pair and outputs the gene-phenotype matrix.
+ ##### 1. Inputs are the path to the results from STEP 2. They are path to 'Extracted_results', 'n_p.txt', 'n_g.txt' and 'In_Summary.txt'
  ##### The dir of the input file and output file is shown in the second cell of the script.
 
 ```
@@ -135,7 +135,7 @@ sfari_gene_dir='Autism_genepheno/source/SFARI-Gene_genes_12-11-2020release_12-19
 NPMI_result_dir='./Autism_genepheno_results/NPMI_file/'                # folder of NPMI file 
 #================================================================================================================================
 ```
-##### 2. Outputs are saved under the directory named './Autism_genepheno_results/NPMI_file/':
+##### 2. Outputs are saved under the directory named ``'./Autism_genepheno_results/NPMI_file/'``:
 ```
 Autism_genepheno_results
 |-NPMI_file
@@ -160,7 +160,7 @@ Output 1. The file ‘NPMI.json' includes all the NPMI information of each gene-
 ]
 ```
 
-Output 2. The NPMI results are grouped by gene in the file ‘NPMI.csv’ file and ‘NPMI_above_zer.csv’.
+Output 2. The NPMI results are grouped by gene in the file ``‘NPMI.csv’`` file and ``‘NPMI_above_zero.csv’``.
 
 ```
 | gene   | phenotype                                                | gene_sfari_class | NPMI     | n_g  | n_p | n_gp |
@@ -169,7 +169,7 @@ Output 2. The NPMI results are grouped by gene in the file ‘NPMI.csv’ file a
 ...
 
 ```
-Output 3. The gene-phenotype matrix is in the ‘graph_matrix_01_NPMIabove0.csv’ file. The matrix shows the quantitative relationship between gene and phenotype. Each row refers to a gene and each column refers to a phenotype. If the NPMI value of a gene-phenotype pair is positive, then their value in the gene-phenotype matrix is 1. else 0. 
+Output 3. The gene-phenotype matrix is in the ‘graph_matrix_01_NPMIabove0.csv’ file. The matrix shows the quantitative relationship between gene and phenotype. Each row refers to a gene and each column refers to a phenotype. If the NPMI value of a gene-phenotype pair is positive, the value in the gene-phenotype matrix is 1, else 0. 
 
 
 ```
