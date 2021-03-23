@@ -46,7 +46,7 @@ Autism_genepheno_results
      |-n_p.txt
      |In_Summary.txt
 ```
-Output 1. Extracted sentence-level gene-phenotype pairs in the folder 'Extracted_results'. Here is an example of the extracted result in JSON format for a PMC paper.
+Output 1. Extracted sentence-level gene-phenotype pairs in the folder ``'Extracted_results'``. Here is an example of the extracted result in JSON format for a PMC paper (``PMCxxxxxxx.json``).
  ```
 {
     "PMCid": "PMC6571119", 
