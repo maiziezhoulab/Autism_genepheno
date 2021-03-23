@@ -18,18 +18,18 @@ python3 Autism_genepheno/bin/Autism_genepheno_PMC_scraper.py --pmc_id_list sourc
  
  ##### 1. Input are the path to gene list, phenotype list, and target papers folder 'XML_Autism_datasets_5years' from step0. 
  ```
-#============================================================================================
-ASDPTO_dir = 'Autism_genepheno/source/ASDPTO.csv'                     # The ASDPTO part phenotype list
-UMLS_dir = 'Autism_genepheno/source/UMLS.txt'                         # The UMLS part phenotype list
-allGene_dir = 'Autism_genepheno/source/export_latest.tsv'             # The autism-associated gene list from VariCarta database
-papers_dir = './XML_datasets_5year/'                                  # Target papers in the last five years
+#==========================================================================================================================
+ASDPTO_dir = 'Autism_genepheno/source/ASDPTO.csv'                # The ASDPTO part phenotype list
+UMLS_dir = 'Autism_genepheno/source/UMLS.txt'                    # The UMLS part phenotype list
+allGene_dir = 'Autism_genepheno/source/export_latest.tsv'        # The autism-associated gene list from VariCarta database
+papers_dir = './XML_datasets_5year/'                             # Target papers in the last five years
 
-out_dir = './Autism_genepheno_results/'                               # default = './Autism_genepheno_results/'
-#============================================================================================
+out_dir = './Autism_genepheno_results/'                          # default = './Autism_genepheno_results/'
+#==========================================================================================================================
 ```
 You can download the gene list ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing) here.
 
-To skip step0, you can also download target papers in the last 5 years ['XML_datasets_5year'](https://drive.google.com/file/d/1pe4UDVBuo0l8NXN5SI84k4bsYUnBHDau/view?usp=sharing) here.
+To skip step0, you can also download target papers in the last 5 years ['XML_Autism_datasets_5year'](https://drive.google.com/file/d/1pe4UDVBuo0l8NXN5SI84k4bsYUnBHDau/view?usp=sharing) here.
 
 
 ##### 2. Output directory named './Autism_genepheno_results/' is shown as:
@@ -123,17 +123,17 @@ Unique normalized phenotype list from all papers: ["['C1510472', 'Dependence syn
  ##### The dir of the input file and output file is shown in the second cell of the script.
 
 ```
-#============================================================================================
+#================================================================================================================================
 # input file dir
 json_path = './Autism_genepheno_results/Extraced_results'              # the output file of step1
 np_dir = './Autism_genepheno_results/Sum_all/n_p.txt'                  # the output file of step1
 ng_dir = './Autism_genepheno_results/Sum_all/n_g.txt'                  # the output file of step1
 In_Summary_dir='./Autism_genepheno_results/Sum_all/In_Summary.txt'     # the output file of step1
-sfari_gene_dir='Autism_genepheno/source/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xlsx'# the SFARI genes file dir
+sfari_gene_dir='Autism_genepheno/source/SFARI-Gene_genes_12-11-2020release_12-19-2020export.xlsx'     # the SFARI genes file dir
 
 # output file dir
 NPMI_result_dir='./Autism_genepheno_results/NPMI_file/'                # folder of NPMI file 
-#============================================================================================
+#================================================================================================================================
 ```
 ##### 2. Outputs are saved under the directory named './Autism_genepheno_results/NPMI_file/':
 ```
