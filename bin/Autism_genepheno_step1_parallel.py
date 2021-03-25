@@ -1,3 +1,18 @@
+# import nltk
+# nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('wordnet')
+from nltk.tokenize import sent_tokenize
+from nltk.stem import WordNetLemmatizer
+from multiprocessing import Pool
+from functools import partial
+import copy
+import re
+import ast
+import csv
+import json
+import os
+    
 def get_dirs():
     ASDPTO_dir = './source/ASDPTO.csv'
     UMLS_dir = './source/UMLS.txt'
@@ -426,7 +441,7 @@ def get_phenotype_lists():
 
 # The following function is to extract gene and phenotype from the given dataset (eg. papers in the folder 'XML_datasets_5year' here).
 
-def para1(f_path, g_ls, ulc_dic, u_c2cid, nc_dic, c2upper, HP_dic, source_dic, out_dir):
+def para1(g_ls, ulc_dic, u_c2cid, nc_dic, c2upper, HP_dic, source_dic, out_dir, f_path):
     PMCid = 'PMC' + f_path[-11:-4]
     title, s_list = XML_reader(f_path)
 
@@ -515,7 +530,7 @@ def get_results(f_ls):
     pool.close()  
     pool.join() 
     
-def para2(f_path, ug_ls, ulc0_dic, u_c2cid, nc_dic, HP_dic, source_dic, out_dir):
+def para2(ug_ls, ulc0_dic, u_c2cid, nc_dic, HP_dic, source_dic, out_dir, f_path):
     
     lemmatizer = WordNetLemmatizer()
     dic = {}
@@ -787,19 +802,4 @@ def find_breakpoint():
         get_sum_all()
         
 if __name__ == "__main__":
-    # import nltk
-    # nltk.download('punkt')
-    # nltk.download('stopwords')
-    # nltk.download('wordnet')
-    from nltk.tokenize import sent_tokenize
-    from nltk.stem import WordNetLemmatizer
-    from multiprocessing import Pool
-    from functools import partial
-    import copy
-    import re
-    import ast
-    import csv
-    import json
-    import os
-    
     find_breakpoint()
