@@ -182,7 +182,7 @@ Output 3. The gene-phenotype matrix is in the â€˜graph_matrix_01_NPMIabove0.csvâ
 
 ```
 
-#### Final output files (gene-phenotype associations) can be downloaded from here:
+#### Final output files (gene-phenotype associations) can be downloaded from [here](https://drive.google.com/drive/folders/11Vhv8lhoXNY-pb5u4duylxGACA3umbaU?usp=sharing):
 
 
 ### STEP 3. Run 'Autism_genepheno_step3.ipynb' to extract a certain gene's phenotype information.
