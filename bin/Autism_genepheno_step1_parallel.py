@@ -12,21 +12,10 @@ import ast
 import csv
 import json
 import os
+import argparse
     
-def get_dirs():
-    ASDPTO_dir = './source/ASDPTO.csv'
-    UMLS_dir = './source/UMLS.txt'
-    allGene_dir = './source/VariCarta_Autism_gene.tsv'
-    papers_dir = './XML_Autism_datasets_5years/'
-    
-    out_dir = './Autism_genepheno_results/'
-    
-    HPOtreeview_dir = './HPO_treeview.txt'   # From https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/hp.obo'
-    return(ASDPTO_dir, UMLS_dir, HPOtreeview_dir, allGene_dir, papers_dir, out_dir)
-
 def handle_HPO_treeview():
     
-    ASDPTO_dir, UMLS_dir, HPOtreeview_dir, allGene_dir, papers_dir, out_dir = get_dirs()
     f = open(HPOtreeview_dir, encoding="utf8")
     text = f.read()
     f.close()
@@ -219,8 +208,6 @@ def gp_extraction(s, g_ls, p_dic):
     return(1,1,1)
 
 def get_phenotype_lists():
-    
-    ASDPTO_dir, UMLS_dir, HPOtreeview_dir, allGene_dir, papers_dir, out_dir = get_dirs()
     
     #Files reading(ASDPTO.csv).
     ASDPTO_ls = []
@@ -501,8 +488,6 @@ def para1(g_ls, ulc_dic, u_c2cid, nc_dic, c2upper, HP_dic, source_dic, out_dir, 
     print('Doing extraction... ; PMC id:', PMCid, '.')
     
 def get_results(f_ls):
-    
-    ASDPTO_dir, UMLS_dir, HPOtreeview_dir, allGene_dir, papers_dir, out_dir = get_dirs()
 
     #Files reading(export_latest.tsv). To generate genotype list.
 
@@ -605,8 +590,6 @@ def para2(ug_ls, ulc0_dic, u_c2cid, nc_dic, HP_dic, source_dic, out_dir, f_path)
     print('Summarizing each paper... ; PMC id:', PMCid, '.')
         
 def get_sum_for_each_paper(f_ls):
-    
-    ASDPTO_dir, UMLS_dir, HPOtreeview_dir, allGene_dir, papers_dir, out_dir = get_dirs()
 
     results_ls = []
     path = out_dir + 'Extraced_results/'
@@ -655,7 +638,6 @@ def get_sum_all():
     
     print('Getting the final summary...')
     
-    ASDPTO_dir, UMLS_dir, HPOtreeview_dir, allGene_dir, papers_dir, out_dir = get_dirs()
     f_ls = []
     path = out_dir + 'Sum_for_each_paper/'
     for root, dirs, files in os.walk(path):
@@ -743,8 +725,6 @@ def get_sum_all():
     
 #To start/continue the extraction
 def find_breakpoint():
-    
-    ASDPTO_dir, UMLS_dir, HPOtreeview_dir, allGene_dir, papers_dir, out_dir = get_dirs()
 
     if not os.path.exists(out_dir):
         os.mkdir(out_dir)
@@ -802,4 +782,22 @@ def find_breakpoint():
         get_sum_all()
         
 if __name__ == "__main__":
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--ASDPTO_dir', type=str, default = './source/ASDPTO.csv')
+    parser.add_argument('--UMLS_dir', type=str, default = './source/UMLS.txt')
+    parser.add_argument('--allGene_dir', type=str, default = './source/VariCarta_Autism_gene.tsv')
+    parser.add_argument('--papers_dir', type=str, default = './XML_Autism_datasets_5years/')
+    parser.add_argument('--HPOtreeview_dir', type=str, default = './HPO_treeview.txt')
+    parser.add_argument('--out_dir', type=str, default = './Autism_genepheno_results/')
+    
+    args = parser.parse_args()
+    
+    ASDPTO_dir = args.ASDPTO_dir
+    UMLS_dir = args.UMLS_dir
+    allGene_dir = args.allGene_dir
+    papers_dir = args.papers_dir
+    HPOtreeview_dir = args.HPOtreeview_dir
+    out_dir = args.out_dir
+    
     find_breakpoint()
