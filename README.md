@@ -27,7 +27,7 @@ papers_dir = './XML_datasets_5year/'                             # Target papers
 out_dir = './Autism_genepheno_results/'                          # default = './Autism_genepheno_results/'
 #==========================================================================================================================
 ```
-You can download the gene list ['export_latest.tsv'](https://drive.google.com/file/d/19suxgUE5VY0jrlY8kGoX3zyb_yHptgDi/view?usp=sharing) here.
+You can download the gene list ['export_latest.tsv'](https://drive.google.com/file/d/1ZgCCWdR134Ns-ArdwQu51oe3IB53JD-a/view?usp=sharing) here.
 
 To skip STEP 0, you can also download target papers in the last 5 years ['XML_Autism_datasets_5year'](https://drive.google.com/file/d/1pe4UDVBuo0l8NXN5SI84k4bsYUnBHDau/view?usp=sharing) here.
 
