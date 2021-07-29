@@ -189,6 +189,6 @@ Output 3. The gene-phenotype matrix is in the â€˜graph_matrix_01_NPMIabove0.csvâ
 Read the file [here](https://github.com/maiziezhoulab/Autism_GenePheno/blob/master/analysis/Step3_README.md).
 
 ## Citation
-Text mining of gene-phenotype associations reveals new phenotypic profiles of autism-associated genes. S. Li, Z. Guo, J. B. Ioffe, Y. Hu, Y. Zhen, X. Zhou. Scientific Reports (2021). 11(1):15269. 
+Text mining of gene-phenotype associations reveals new phenotypic profiles of autism-associated genes. S. Li, Z. Guo, J. B. Ioffe, Y. Hu, Y. Zhen, X. Zhou. Scientific Reports (2021) 11(1):15269. 
 
 
